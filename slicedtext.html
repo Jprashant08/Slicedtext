@@ -1,0 +1,47 @@
+<html>
+<title>Sliced Text Effect</title>
+<head>
+
+<style>
+*{box-sizing:border-box;}
+:root{--background-color:white;
+        --text-color:hs1(0,0%,100%);
+        }
+body{margin:0;}
+
+.wrapper{
+	display:grid;
+	place-content:center;
+	background-color: var(--background-color);
+	min-height:100vh;
+	font-family:"Oswald",sifonn;
+	font-size:200px;
+	font-weight:700;
+	text-transform:uppercase;
+	color: var(--text-color);
+}
+.wrapper>div{
+	grid-area:1/1/-1/-1;
+}
+.top{clip-path:polygon(0% 0%, 100% 0%, 100% 48%,0% 50%);}
+ 
+ .bottom{ clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+ color:blue;
+ background:-webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+ background:-linear-gradient(177deg, black 53%, var(--text-color) 85%);
+ -webkit-background-clip:text;
+ -webkit-background-clip:text;
+ transform:translateX(-0.02em);
+ }
+</style>
+
+</head>
+
+<body>
+<section class="wrapper">
+<div class="top">PROgrammer</div>
+<div class="bottom" aria-hidden="true">PROgrammer</div>
+</section>
+
+</body>
+</html>
